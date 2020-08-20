@@ -224,8 +224,7 @@ function Global:Ping-IPRange {
   if($Reply -eq $Null){
       Write-Verbose "Ping-IPrange : No ip address responded" -Verbose
   }
-$Results = $Reply
 
   return $Reply | export-csv -path "C:\Users\borddaus\OneDrive - B. Braun\Powershell_Scripts\Ping\PingOutput.csv" -NoTypeInformation
+$Results = Import-Csv "C:\Users\borddaus\OneDrive - B. Braun\Powershell_Scripts\Ping\PingOutput.csv"
 }
-write-host $Results | FT
