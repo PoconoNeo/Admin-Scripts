@@ -1,0 +1,1 @@
+﻿get-aduser -identity username -Properties *
